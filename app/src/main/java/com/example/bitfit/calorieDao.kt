@@ -8,18 +8,18 @@ import kotlinx.coroutines.flow.Flow
 
 
 @Dao
-interface calorieDao {
-    @Query("SELECT * FROM food_table")
-    fun getAll(): Flow<List<FoodEntity>>
+interface CalorieDao {
+    @Query("SELECT * FROM food")
+    fun getAll(): Flow<List<Food>>
 
     @Insert
-    fun insertAll(foodCal: List<FoodEntity>)
+    fun insertAll(foodCal: List<Food>)
 
     @Insert
-    fun insert(foodCal: FoodEntity)
+    fun insert(foodCal: Food)
 
 
-    @Query("DELETE FROM food_table")
+    @Query("DELETE FROM food")
     fun deleteAll()
 
 

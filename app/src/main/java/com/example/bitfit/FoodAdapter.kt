@@ -16,18 +16,21 @@ class FoodAdapter (private val mItems: List<Food>) : RecyclerView.Adapter<FoodAd
 
         init{
             foodTextView = itemView.findViewById(R.id.foodName)
-            calorieTextView = itemView.findViewById(R.id.calorie)
+            calorieTextView = itemView.findViewById(R.id.calorieNum)
         }
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
         val context = parent .context
         val inflater = LayoutInflater.from(context)
 
         val contactView = inflater.inflate(R.layout.item_food, parent, false)
 
+
+        //val view = LayoutInflater.from(context).inflate(R.layout.item_food, parent, false)
         return ViewHolder(contactView)
 
     }
